@@ -27,6 +27,16 @@ body{
     padding: 5px;
 }
 
+#owner{
+    position: relative;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translate(70%, -120%);
+    color: #ffff;
+    font-weight: 600;
+    font-size: 35px;
+}
+
 #brandmain a img{
     width: 99%;
     height: 99%;
