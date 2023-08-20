@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
@@ -6,28 +6,29 @@
     background: transparent;
 }
 
-html, body{
+html,
+body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: sticky;
 }
 
-body{
-    background-image: url(bg-image.png);
+body {
+    background-image: url(./bg-image.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-#brandmain{
+#brandmain {
     width: 8vh;
     height: 8vh;
     border-radius: 50%;
     padding: 5px;
 }
 
-#owner{
+#owner {
     position: relative;
     border-radius: 50%;
     padding: 5px;
@@ -37,14 +38,20 @@ body{
     font-size: 35px;
 }
 
-#brandmain a img{
+@media (max-width:600px) {
+    #owner {
+        transform: translate(10%, 0);
+    }
+}
+
+#brandmain a img {
     width: 99%;
     height: 99%;
     border-radius: 50%;
     border: 2px solid #f1f1f1;
 }
 
-#search{
+#search {
     z-index: 1;
     position: absolute;
     width: 44vh;
@@ -56,7 +63,13 @@ body{
     border: 1px solid #f1f1f1
 }
 
-#search form{
+@media (max-width:600px) {
+    #search {
+        width: 90vw;
+    }
+}
+
+#search form {
     height: 100%;
     width: 100%;
     display: flex;
@@ -66,7 +79,7 @@ body{
     background-color: rgba(221, 31, 31, 0.363);
 }
 
-#search input{
+#search input {
     margin-left: 5%;
     height: 100%;
     width: 85%;
@@ -80,10 +93,11 @@ body{
 
 ::placeholder {
     color: #f1f1f1;
-    opacity: 1; /* Firefox */
-  }
+    opacity: 1;
+    /* Firefox */
+}
 
-#search button{
+#search button {
     height: 100%;
     width: 10%;
     border: 0;
@@ -94,20 +108,29 @@ body{
     fill: white;
 }
 
-#search button img{
+#search button img {
     width: 50%;
     height: 50%;
     color: antiquewhite;
 }
 
 
-#navmain{
+#navmain {
     width: 100%;
     height: 100%;
-    /*background-color: #ffff; */   
+    /*background-color: #ffff; */
 }
 
-#navcircle{
+@media (max-width:600px) {
+    #navcircle {
+        width: 200vh !important;
+        height: 200vh ! important;
+        left: -190vh ! important;
+        transform: translate(0, -50%) !important;
+    }
+}
+
+#navcircle {
     border: 2px solid #dadada;
     width: 200vh;
     height: 200vh;
@@ -118,7 +141,7 @@ body{
     transform: translate(0, -50%) rotate(100deg);
 }
 
-.strip{
+.strip {
     position: absolute;
     top: 48.5%;
     left: 50%;
@@ -129,13 +152,13 @@ body{
     display: flex;
 }
 
-.first{
+.first {
     width: 50%;
     height: 100%;
     position: relative;
 }
 
-.smcircle{
+.smcircle {
     position: absolute;
     right: -.35vw;
     top: 50%;
@@ -146,7 +169,7 @@ body{
     background-color: #5b5b5b77;
 }
 
-.sec{
+.sec {
     padding-left: 30px;
     width: 50%;
     height: 100%;
@@ -154,37 +177,37 @@ body{
     opacity: .8;
 }
 
-.sec h4{
+.sec h4 {
     font-size: 2vw;
 }
 
-.sec h6{
+.sec h6 {
     font-size: 1vw;
     opacity: .5;
     font-weight: 500;
 }
 
-.str1{
+.str1 {
     transform: rotate(-20deg);
 }
 
-.str2{
+.str2 {
     transform: rotate(-10deg);
 }
 
-.str3{
+.str3 {
     transform: rotate(0deg);
 }
 
-.str4{
+.str4 {
     transform: rotate(10deg);
 }
 
-.str5{
+.str5 {
     transform: rotate(20deg);
 }
 
-#panel{
+#panel {
     position: absolute;
     width: 3%;
     height: 20%;
@@ -197,7 +220,14 @@ body{
     justify-content: space-between;
 }
 
-.mncircle{
+@media (max-width:600px){
+    #panel{
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+
+.mncircle {
     width: 1vw;
     height: 1vw;
     border-radius: 50%;
@@ -207,7 +237,7 @@ body{
     opacity: .1;
 }
 
-#flowerpot{
+#flowerpot {
     position: absolute;
     width: 14vh;
     height: 30vh;
@@ -217,7 +247,13 @@ body{
     border-radius: 15px;
 }
 
-#plant{
+@media (max-width:600px) {
+    #flowerpot {
+        right: 50%;
+    }
+}
+
+#plant {
     width: 100%;
     height: 50%;
     border-radius: 15px 15px 0 0;
@@ -226,7 +262,7 @@ body{
     align-items: flex-end;
 }
 
-#plant .plant-arm{
+#plant .plant-arm {
     width: 30%;
     height: 100%;
     display: flex;
@@ -240,14 +276,14 @@ body{
     height: 15%;
     width: 100%;
     border: 0px solid red;
-    position: relative;  
+    position: relative;
     display: flex;
     justify-content: space-around;
     z-index: -2;
     transform: translate(0, 20%);
 }
 
-#plant .plant-arm .flower .leaf{
+#plant .plant-arm .flower .leaf {
     width: 0px;
     height: 0px;
     border-left: 10px solid transparent;
@@ -257,19 +293,19 @@ body{
     position: absolute;
 }
 
-#plant .plant-arm .flower .l1{
+#plant .plant-arm .flower .l1 {
     transform: translate(-50%, 0) rotate(-20deg);
 }
 
-#plant .plant-arm .flower .l2{
+#plant .plant-arm .flower .l2 {
     transform: translate(0, 0);
 }
 
-#plant .plant-arm .flower .l3{
+#plant .plant-arm .flower .l3 {
     transform: translate(50%, 0) rotate(20deg);
 }
 
-#plant .plant-arm .arm{
+#plant .plant-arm .arm {
     background-color: green;
     border-radius: 20px 20px 0 0;
     width: 100%;
@@ -279,40 +315,40 @@ body{
     align-items: flex-start;
 }
 
-#plant .plant-arm .arm .sub{
+#plant .plant-arm .arm .sub {
     outline: 0.5px solid rgb(48, 41, 41);
     outline-offset: -5px;
     height: 100%;
     width: 2px;
 }
 
-#plant .arm1{
+#plant .arm1 {
     transform: translate(0, 20%) rotate(-25deg) !important;
 }
 
-#plant .arm2{
+#plant .arm2 {
     transform: translate(0, 10%) rotate(0deg);
     width: 35%;
 }
 
-#plant .arm3{
+#plant .arm3 {
     transform: translate(0, 20%) rotate(25deg);
 }
 
-#pot{
+#pot {
     width: 100%;
     height: 50%;
     border-radius: 0 0 15px 15px;
 }
 
-#pot-ribbun{
+#pot-ribbun {
     background-color: rgb(243, 75, 14);
     width: 100%;
     height: 10%;
     border: 0;
 }
 
-#pot-body{
+#pot-body {
     width: 100%;
     height: 100%;
     display: flex;
@@ -327,8 +363,8 @@ body{
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 15px solid #c2431c ;
-  }
+    border-top: 15px solid #c2431c;
+}
 
 #pot-body #bottom {
     border: 0;
@@ -336,14 +372,14 @@ body{
     height: 0px;
     border-left: 28px solid transparent;
     border-right: 28px solid transparent;
-    border-top: 100px solid rgba(241, 87, 31, 0.993) ;
+    border-top: 100px solid rgba(241, 87, 31, 0.993);
     display: flex;
     justify-content: center;
     align-items: center;
     /*box-shadow: 10px 10px 5px 5px lightblue;*/
 }
 
-#pot-body #bottom img{
+#pot-body #bottom img {
     transform: translate(0, -100%);
     width: 50px;
 }
