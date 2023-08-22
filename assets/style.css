@@ -4,6 +4,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
     background: transparent;
+    --rotate-nav: 100deg;
 }
 
 html,
@@ -15,7 +16,7 @@ body {
 }
 
 body {
-    background-image: url(./bg-image.png);
+    background-image: url(./bg-china.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -26,6 +27,7 @@ body {
     height: 8vh;
     border-radius: 50%;
     padding: 5px;
+    position: absolute;
 }
 
 #owner {
@@ -40,7 +42,8 @@ body {
 
 @media (max-width:600px) {
     #owner {
-        transform: translate(10%, 0);
+        transform: translate(20%, 20%) !important;
+        font-size: 30px !important;
     }
 }
 
@@ -65,7 +68,8 @@ body {
 
 @media (max-width:600px) {
     #search {
-        width: 90vw;
+        width: 90vw !important;
+        transform: translate(5%, -650%) !important;
     }
 }
 
@@ -76,7 +80,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-radius: 15px;
-    background-color: rgba(221, 31, 31, 0.363);
+    /*background-color: rgba(221, 31, 31, 0.363);*/
 }
 
 #search input {
@@ -123,10 +127,22 @@ body {
 
 @media (max-width:600px) {
     #navcircle {
-        width: 200vh !important;
-        height: 200vh ! important;
         left: -190vh ! important;
-        transform: translate(0, -50%) !important;
+        transform: translate(0, -50%) rotate(var(--rotate-nav)) !important;
+    }
+    .sec{
+        padding-left: 10px !important;
+    }
+    .smcircle{
+        right: -1.35vw !important;
+        height: 2.5vw !important;
+        width: 2.5vw !important;
+    }
+    .sec h4{
+        font-size: 6vw !important;
+    }
+    .sec h6{
+        font-size: 3vw !important;
     }
 }
 
@@ -138,7 +154,7 @@ body {
     border-radius: 50%;
     top: 50%;
     left: -150vh;
-    transform: translate(0, -50%) rotate(100deg);
+    transform: translate(0, -50%) rotate(var(--rotate-nav));
 }
 
 .strip {
@@ -175,6 +191,9 @@ body {
     height: 100%;
     color: #f1f1f1;
     opacity: .8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .sec h4 {
@@ -223,6 +242,13 @@ body {
 @media (max-width:600px){
     #panel{
         transform: translate(-50%, -50%) !important;
+        right: 1% !important;
+    }
+    .mncircle{
+        width: 3vw !important;
+        height: 3vw !important;
+        background-color: white !important;
+        border: 1px solid white !important;
     }
 }
 
@@ -249,7 +275,8 @@ body {
 
 @media (max-width:600px) {
     #flowerpot {
-        right: 50%;
+        right: 50% !important;
+        transform: translate(50%, 50%) !important;
     }
 }
 
